@@ -1,0 +1,21 @@
+{
+  "short_name": "CampusNav",
+  "name": "CampusNav - Smart Navigation",
+  "description": "Smart campus navigation web app using a digital twin.",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}

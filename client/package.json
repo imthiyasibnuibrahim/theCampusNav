@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "@capacitor/ios": "^8.2.0",
     "@mappedin/mappedin-js": "^6.15.0",
     "axios": "^1.13.6",
     "lucide-react": "^0.576.0",
@@ -30,7 +34,8 @@
     "globals": "^16.5.0",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
-    "vite": "^8.0.0-beta.13"
+    "vite": "^8.0.0-beta.13",
+    "vite-plugin-pwa": "^1.2.0"
   },
   "overrides": {
     "vite": "^8.0.0-beta.13"

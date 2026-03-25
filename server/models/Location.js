@@ -18,7 +18,11 @@ const locationSchema = new mongoose.Schema({
     type: String,
     enum: ['classroom', 'lab', 'office', 'facility', 'amenity'],
     required: true
-  }
+  },
+  faculty: [{
+    name: { type: String },
+    position: { type: String }
+  }]
 }, { timestamps: true });
 
 module.exports = mongoose.model('Location', locationSchema);

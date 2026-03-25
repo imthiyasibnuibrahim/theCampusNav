@@ -139,8 +139,8 @@ export default function Directory() {
                             key={loc._id}
                             className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row sm:items-center justify-between gap-4"
                         >
-                            <div>
-                                <div className="flex items-center gap-3 mb-1">
+                            <div className="flex-1">
+                                <div className="flex items-center flex-wrap gap-2 mb-1">
                                     <h3 className="text-lg font-bold text-gray-800 flex items-center gap-2">
                                         {loc.name}
                                         <button
@@ -158,7 +158,21 @@ export default function Directory() {
                                     </span>
                                 </div>
                                 <p className="text-gray-500 text-sm">{loc.description}</p>
-                                <div className="flex items-center gap-1 mt-2 text-xs text-gray-400 font-mono">
+                                
+                                {loc.faculty && loc.faculty.length > 0 && (
+                                    <div className="mt-2.5 bg-gray-50 border border-gray-100 rounded-xl p-3">
+                                        <div className="text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wide">Faculty Present</div>
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {loc.faculty.map((f, i) => (
+                                                <span key={i} className="inline-flex items-center bg-white text-gray-700 text-xs px-2 py-1 rounded-md border border-gray-200 shadow-sm" title={f.position}>
+                                                    {f.name}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                <div className="flex items-center gap-1 mt-3 text-xs text-gray-400 font-mono">
                                     <MapPin className="h-3 w-3" />
                                     ID: {loc.mappedinPolygonId}
                                 </div>

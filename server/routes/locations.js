@@ -16,7 +16,8 @@ router.get('/search', async (req, res) => {
             $or: [
                 { name: { $regex: q, $options: 'i' } },
                 { description: { $regex: q, $options: 'i' } },
-                { category: { $regex: q, $options: 'i' } }
+                { category: { $regex: q, $options: 'i' } },
+                { 'faculty.name': { $regex: q, $options: 'i' } }
             ]
         });
 
